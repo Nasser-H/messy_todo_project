@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messy ToDo</title>
+     <!-- tailwind css file -->
+    <link rel="stylesheet" href="css/tailwind.min.css">
+</head>
+<body>
+    <header class="mt-10">
+        <div class="bg-slate-600 rounded-e-3xl rounded-b-3xl py-4 w-10/12 md:w-3/4 lg:w-1/2 mx-auto shadow-2xl">
+            <h1 class="uppercase text-center lg:text-6xl md:text-4xl text-2xl text-lime-300 font-bold">my tasks</h1>
+        </div>
+        <form class="w-10/12 md:w-3/4 lg:w-1/2 mt-6 mx-auto flex flex-col justify-center items-center">
+            <div class="relative z-0 w-full mb-5 group">
+                <input type="text" name="taskToBeDone" id="taskToBeDone"
+                    class="block py-2.5 px-0 w-full text-3xl text-lime-300 backdrop-brightness-170 text-center bg-transparent border-0 border-b-2 border-slate-600 appearance-none focus:outline-none focus:ring-0 focus:border-lime-300 peer"
+                    placeholder=" "/>
+                <label for="taskToBeDone"
+                    class="peer-focus:font-medium absolute text-xl md:text-4xl text-green-600 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-lime-300  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                    Task To Be Done...    
+                </label>
+            </div>
+            <button type="submit"
+                class="text-lime-300 cursor-pointer bg-slate-600 hover:bg-slate-700 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-lg text-xl w-full sm:w-auto px-8 py-2.5 text-center">Add Task</button>
+        </form>
+    </header>
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg my-5 px-6">
+        <div
+            class="flex items-center justify-between flex-column md:flex-row flex-wrap space-y-4 md:space-y-0 py-4 bg-white rounded-3xl">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 rounded-3xl overflow-hidden">
+                <thead class="text-xs text-gray-700 uppercase bg-lime-50">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                            task
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-end">
+                            Status
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-end">
+                            delete
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>        
+                    <tr
+                        class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                        <td class="px-6 py-4 cursor-pointer line-through">
+                            UI/UX Engineer
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="flex items-center justify-end">
+                                <div class="h-auto w-fit py-1 px-3 rounded-full text-white bg-green-500 -me-2">Done</div> 
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-end ">
+                            <button type="button"
+                                class="cursor-pointer text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center -me-3 mb-2">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="bg-white hover:bg-gray-50">
+                        <td class="px-6 py-4 cursor-pointer">
+                            SEO Specialist
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="flex items-center justify-end">
+                                <div class="h-auto w-fit py-1 px-3 rounded-full text-white bg-orange-500 -me-6">in process</div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-end">
+                            <button type="button"
+                                class="cursor-pointer text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center -me-3 mb-2">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
