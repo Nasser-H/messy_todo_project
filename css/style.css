@@ -1,0 +1,8 @@
+@font-face{
+    font-family:Tagesschrift;
+    src:url(../fonts/Tagesschrift-Regular.ttf)
+}
+body{
+    font-family:Tagesschrift;
+    background-image:url(../images/design-tools.jpg)
+}
